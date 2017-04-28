@@ -1,16 +1,13 @@
-var server = require("../../server.js");
+module.exports = function(app,path){
 var friendsArray = [];
 
-server.app.get("/api/friends", function(request, response){
-    response.json({{friends}});
+app.get("/api/friends", function(req, res){
+    res.json(friendsArray);
 });
 
-server.app.post("/api/friends", function(request, response){
-    //object constructor function
-   function friendsSurvey(Name, Photo, Scores){
-       this.name = Name;
-       this.photo = Photo;
-       this.scores = Scores;
-   }
+app.post("/api/friends", function(req, res){
+    newFriend = req.body;
+    friendsArray.push(req.body);
    
 });
+}

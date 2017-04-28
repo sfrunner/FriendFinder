@@ -1,0 +1,13 @@
+.btn-group, .btn-group-vertical {
+    display:inline;
+}
+
+.btn-group-vertical>.btn, .btn-group-vertical>.btn-group, .btn-group-vertical>.btn-group>.btn{
+    width: 100%;
+}
+
+#submit-btn{
+    float: right;
+    margin-top:10px;
+    text-align: center;
+}

@@ -1,11 +1,15 @@
-var server = require("../../server.js");
+module.exports = function(app,path){
 
-server.app.get("/", function(request, response){
-    response.sendFile(server.path.join(__dirname + '../public/home.html'));
+app.get("/", function(request, response){
+    response.sendFile(path.join(__dirname + '../public/home.html'));
 });
 
-server.app.get("/survey", function(request, response){
-    response.sendFile(server.path.join(__dirname + '../public/survey.html'));
+app.get("/survey", function(request, response){
+    console.log("cool");
+    response.sendFile(path.join(__dirname,"../public","survey.html"));
+    
 });
+
+}
 
 
