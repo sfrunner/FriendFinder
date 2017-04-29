@@ -7,8 +7,7 @@ $(document).ready(function(){
                     questionNumber: i,
                     value: event.target.innerHTML
         };
-        console.log(questionValueArray);
-        console.log(questionValueArray.length);
+        console.log(questionValueArray.value);
     });
     $("#submit-btn").on("click", function(event){
         if(questionValueArray.indexOf("") !== -1){
@@ -23,13 +22,29 @@ $(document).ready(function(){
             var newFriendData = {
                 name: $("#name").val().trim(),
                 photoURL: $("#photo-url").val().trim(),
-                finalScore: finalValue
+                finalScore: finalValue,
+                recommendFriendForRecentUser: "no"
             }
             console.log(newFriendData);
            $.post("/api/friends", newFriendData).done(function(data){
-					console.log(danewFriendDatata);
+					console.log(newFriendData);
 					console.log("Submitted your reservation request");
-			});
+                    $.get("api/friends", function(data){
+                        $.each(data, function(i,val){
+                           if(val.recommendFriendForRecentUser = "yes"){
+                               $(".row").hide();
+                               var newText = $("<h3>");
+                               newText.html(val.name);
+                               var newImg = $("<img>");
+                               newImg.attr("src",val.photoURL);
+                               newImg.attr("alt",val.name);
+                               $(".container-fluid").append(newText);
+                               $(".container-fluid").append(newImg);
+                        } 
+                        });
+                    });
+            });
+            finalValue = 0;
         }
     });
 });
