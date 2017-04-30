@@ -1,0 +1,14 @@
+.jumbotron{
+    margin-right:15%;
+    margin-left:15%;
+    text-align: center;
+}
+
+button{
+    float:left;
+}
+
+.btn-group{
+    margin-right:15%;
+    margin-left:15%;
+}

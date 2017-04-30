@@ -1,13 +1,12 @@
 module.exports = function(app,path){
 
 app.get("/", function(request, response){
-    response.sendFile(path.join(__dirname + '../public/home.html'));
+    response.sendFile(path.join(__dirname.replace("routing",""),"public","home.html"));
+    console.log(__dirname);
 });
 
 app.get("/survey", function(request, response){
-    console.log("cool");
     response.sendFile(path.join(__dirname,"../public","survey.html"));
-    
 });
 
 }
