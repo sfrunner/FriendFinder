@@ -20,7 +20,7 @@ $(document).ready(function(){
             var newFriendData = {
                 name: $("#name").val().trim(),
                 photoURL: $("#photo-url").val().trim(),
-                value: questionValueArray,
+                values: questionValueArray,
             }
             console.log(newFriendData);
            $.post("/api/friends", newFriendData).done(function(data){
