@@ -16,7 +16,7 @@
     display:block;
     position:fixed;
     z-index:1;
-    top:10%;
+    top:5%;
     left:12%;
     text-align: center;
     width:75%;
@@ -45,7 +45,7 @@
 }
 
 #resultImg{
-    width: 50%;
-    height:50%;
+    width: 45%;
+    height:45%;
 }
 
