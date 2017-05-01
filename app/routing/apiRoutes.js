@@ -14,7 +14,6 @@ module.exports = function(app,path){
         console.log("Someone has connected to Survey!");
         //Sum up  newFriend Values
         for(var a = 0; a < newFriend.value.length; a++){
-            console.log(req.body.value[a].value);
             newFriendFinalValue += parseInt(newFriend.value[a].value);
         }
 
