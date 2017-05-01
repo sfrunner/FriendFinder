@@ -34,6 +34,7 @@ $(document).ready(function(){
             finalValue = 0;
             $("#name").val("");
             $("#photo-url").val("");
+            questionValueArray = ["","","","","","","","","",""];
         }
     });
     //Close Modal Event Listener
