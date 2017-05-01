@@ -33,7 +33,7 @@ $(document).ready(function(){
             });
             finalValue = 0;
             $("#name").val("");
-            $("#photoURL").val("");
+            $("#photo-url").val("");
         }
     });
     //Close Modal Event Listener
