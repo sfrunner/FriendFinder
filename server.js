@@ -11,4 +11,4 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 require("./app/routing/apiRoutes.js")(app,path);
 require("./app/routing/htmlRoutes.js")(app,path);
 
-app.listen(PORT, "localhost");
+app.listen(PORT);
