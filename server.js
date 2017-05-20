@@ -12,3 +12,4 @@ require("./app/routing/apiRoutes.js")(app,path);
 require("./app/routing/htmlRoutes.js")(app,path);
 
 app.listen(PORT);
+// it's general practice to print out what port the server is listening on as a signal to developers when they start your server

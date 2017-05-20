@@ -11,10 +11,10 @@
   },
   "author": "Steven Fox",
   "license": "ISC",
+  "comments": "There's no need to install the `path` package as it's a native node package.",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "path": "^0.12.7",
     "start": "^5.1.0"
   }
 }
