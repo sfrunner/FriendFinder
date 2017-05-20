@@ -1,5 +1,8 @@
 module.exports = function(app,path){
     var friendsArray = [];
+    // the friendsArray should stay out on this level of the scope, but the rest of these variables should 
+    // probably just be moved into your post handler. Added benefit of that is that you don't need to worry
+    // about resetting their values at the end of the handler. The less state you have to maintain the better 👌
     var newFriendFinalValue = 0;
     var pastUserScore = 0;
     var lowestValue;
@@ -25,6 +28,9 @@ module.exports = function(app,path){
                     pastUserScore += parseInt(friendsArray[i].value[b].value);
                 }
                 var differenceValue = Math.abs(newFriendFinalValue - pastUserScore);
+                // how your code is currently structured, the first time this line is run will result in the `lowestValue == null` returning
+                // true because it's comparing undefined to null using type coercion checking. This is pretty nifty, but it's not a point
+                // that every JS developer will understand.
                 if(differenceValue <= lowestValue || lowestValue == null){
                     lowestValue = differenceValue;
                     recommendedFriend = friendsArray[i];
